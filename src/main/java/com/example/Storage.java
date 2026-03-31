@@ -20,11 +20,13 @@ public class Storage {
         ArrayList<NameDict> nameDictList = new ArrayList<>();
         String fileName = Prop.getFileName();
         File file = new File(fileName);
-        try(Scanner sc = new Scanner(file, "utf8")) {
+        try(Scanner sc = new Scanner(file)) {
             sc.nextLine();
             while(sc.hasNextLine()) {
                 String line = sc.nextLine();
-                System.out.println(line);
+                String[] lineArray = line.split(":");
+                NameDict nameDict = new NameDict(lineArray[0], lineArray[1]);
+                nameDictList.add(nameDict);
             }
         }
         return nameDictList;

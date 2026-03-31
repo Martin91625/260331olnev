@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.MainSceneController">
    <children>
       <Button layoutX="168.0" layoutY="127.0" mnemonicParsing="false" onAction="#onClickSearchButton" prefHeight="57.0" prefWidth="264.0" text="Névkeresés">
          <font>
@@ -19,5 +18,6 @@
             <Font size="35.0" />
          </font>
       </Label>
+      <Button fx:id="closeButton" layoutX="168.0" layoutY="326.0" mnemonicParsing="false" onAction="#onClickExitButton" prefHeight="24.0" prefWidth="264.0" text="Kilépés" />
    </children>
 </Pane>
