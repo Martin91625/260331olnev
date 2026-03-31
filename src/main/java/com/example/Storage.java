@@ -12,7 +12,6 @@ public class Storage {
             return tryReadContent();
         } catch (FileNotFoundException event) {
             System.err.println(event.getMessage());
-            event.printStackTrace();
             return null;
         }
         
@@ -20,7 +19,7 @@ public class Storage {
     private static ArrayList<NameDict> tryReadContent() throws FileNotFoundException {
         ArrayList<NameDict> nameDictList = new ArrayList<>();
         String fileName = Prop.getFileName();
-        File file = new File("adat.txt");
+        File file = new File(fileName);
         try(Scanner sc = new Scanner(file, "utf8")) {
             sc.nextLine();
             while(sc.hasNextLine()) {
